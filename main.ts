@@ -2,6 +2,7 @@ let Χ = 0
 input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
     led.setBrightness(255)
+    Χ = input.temperature()
     basic.showNumber(Χ)
     basic.clearScreen()
 })
@@ -23,9 +24,8 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     Χ = input.temperature()
-    Χ = 5 * Χ
     basic.clearScreen()
-    led.setBrightness(255)
+    led.setBrightness(5 * Χ)
     basic.showLeds(`
         . # . # .
         # . # . #
