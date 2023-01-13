@@ -24,8 +24,9 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     Χ = input.temperature()
+    Χ = 5 * Χ
     basic.clearScreen()
-    led.setBrightness(5 * Χ)
+    led.setBrightness(Χ)
     basic.showLeds(`
         . # . # .
         # . # . #
@@ -34,7 +35,7 @@ input.onButtonPressed(Button.B, function () {
         . . # . .
         `)
     music.setVolume(Χ)
-    music.playMelody("C5 B A G F E D C ", 10 * Χ)
-    music.playMelody("C D E F G A B C5 ", 10 * Χ)
+    music.playMelody("C5 B A G F E D C ", Χ)
+    music.playMelody("C D E F G A B C5 ", Χ)
     basic.clearScreen()
 })
